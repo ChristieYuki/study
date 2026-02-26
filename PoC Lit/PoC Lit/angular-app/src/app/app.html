@@ -1,0 +1,12 @@
+<div class="mainContent">
+  <custom-card [open]="open">
+    <div slot="header">Titulo card</div>
+    <div slot="body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua.
+    </div>
+    <div slot="footer">
+      <custom-button (click)="toggleOpen()" label="{{ open ? 'Fechar' : 'Abrir' }}"/>
+    </div>
+  </custom-card>
+</div>

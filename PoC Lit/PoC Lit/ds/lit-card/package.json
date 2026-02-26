@@ -1,0 +1,26 @@
+{
+  "name": "lit-card",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/lit-card.js",
+  "module": "./dist/lit-card.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@lit/context": "^1.1.6",
+    "lit": "^3.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}
