@@ -1,11 +1,9 @@
 {
-  "name": "lit",
+  "name": "js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "web-dev-server --node-resolve --open --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,12 +11,7 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@web/dev-server": "^0.4.6",
-    "typescript": "^4.0.0",
-    "ts-loader": "^9.5.4",
-    "webpack": "^5.105.2",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.3"
+    "@web/dev-server": "^0.4.6"
   },
   "dependencies": {
     "lit": "^3.3.2"
