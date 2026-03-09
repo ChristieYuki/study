@@ -1,0 +1,35 @@
+### Get all users
+GET http://localhost:3000/users
+
+### Sign Up
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email":"user2@gmail.com",
+    "password": "change@it",
+    "roles": ["admin"]
+}
+
+### Sign In
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email":"user2@gmail.com",
+    "password": "change@it"
+}
+
+### Get public resource
+GET http://localhost:3000/feature/public
+
+### Get private resource
+GET http://localhost:3000/feature/private
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxQGdtYWlsLmNvbSIsInN1YiI6Miwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzcyNTU2OTc2LCJleHAiOjE3NzI1NTcwOTZ9.JYHl4pJa1_TKijge37qj-3gsaBsaLGbIyYri-Z2XlJ8
+
+### Get admin resource
+GET http://localhost:3000/feature/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIxQGdtYWlsLmNvbSIsInN1YiI6Miwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzcyNTU2OTc2LCJleHAiOjE3NzI1NTcwOTZ9.JYHl4pJa1_TKijge37qj-3gsaBsaLGbIyYri-Z2XlJ8
+
+### DELETE
+DELETE http://localhost:3000/users/3

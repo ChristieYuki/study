@@ -1,0 +1,16 @@
+### Get All Stocks
+GET http://localhost:3000/stocks
+
+### Create Stocks
+POST http://localhost:3000/stocks
+Content-Type: application/json
+
+{
+  "name":"Tesla",
+  "code":"TSLA",
+  "fullName":"Tesla Inc"
+}
+
+### Delete Stock
+DELETE http://localhost:3000/stocks/4
+

@@ -1,0 +1,19 @@
+### GET /users-stocks/:id
+GET http://localhost:3000/users-stocks/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIyQGdtYWlsLmNvbSIsInN1YiI6Miwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzcyNTYzMzExLCJleHAiOjE3NzI1NjM0MzF9.wsCFpuoHb7SU1VfR3Mr9dYErPxoxwFsuHzr9lSDghPA
+
+### POST add stock to user
+POST http://localhost:3000/users-stocks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIyQGdtYWlsLmNvbSIsInN1YiI6Miwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzcyNTYzMzExLCJleHAiOjE3NzI1NjM0MzF9.wsCFpuoHb7SU1VfR3Mr9dYErPxoxwFsuHzr9lSDghPA
+
+{
+    "userId": 1,
+    "stockId": 1
+}
+
+### DELETE stock from user
+DELETE http://localhost:3000/users-stocks/12
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIyQGdtYWlsLmNvbSIsInN1YiI6Miwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNzcyNTYzMzExLCJleHAiOjE3NzI1NjM0MzF9.wsCFpuoHb7SU1VfR3Mr9dYErPxoxwFsuHzr9lSDghPA
+
+

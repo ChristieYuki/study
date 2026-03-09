@@ -1,0 +1,124 @@
+############### USERS RESOURCES ###############
+
+### LIST all users
+GET http://localhost:3000/users
+
+### Sign Up
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email":"user@gmail.com",
+    "password": "change@it",
+    "roles": ["admin"]
+}
+
+### Sign In
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email": "user@gmail.com",
+    "password": "change@it"
+}
+
+### Refresh
+POST http://localhost:3000/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJAZ21haWwuY29tIiwic3ViIjoiZGE3ZGNhYjEtZmJiMS00N2I4LWIxNmYtMzE4MDE0YzcxNTFmIiwicm9sZXMiOlsiYWRtaW4iXSwidHlwZSI6InJlZnJlc2giLCJpYXQiOjE3NzI3OTg2NTIsImV4cCI6MTc3MjgwMjI1Mn0.capaVlCmISkQDi9-KzFxoJTlZRk_Dg0Y5YxUl_-lgN0"
+}
+
+### DELETE
+DELETE http://localhost:3000/users/c7c7268b-39ac-4367-befb-6268306bea24
+
+############### STOCKS RESOURCES ###############
+
+### List All Stocks
+GET http://localhost:3000/stocks
+
+### Create Stock
+POST http://localhost:3000/stocks
+Content-Type: application/json
+
+{
+  "stocks": [
+    {
+        "name":"NVIDIA CORPORATION",
+        "code":"NVDA",
+        "fullName":"NVIDIA Corporation"
+    },
+    {
+        "name":"Apple",
+        "code":"AAPL",
+        "fullName":"Apple Inc"
+    },
+    {
+        "name":"Alphabet - Google (C)",
+        "code":"GOOG",
+        "fullName":"Alphabet Inc Class C"
+    },
+    {
+        "name":"Alphabet - Google (A)",
+        "code":"GOOGL",
+        "fullName":"Alphabet Inc A"
+    },
+    {
+        "name":"Microsoft",
+        "code":"MSFT",
+        "fullName":"Microsoft Corporation"
+    },
+    {
+        "name":"Amazon",
+        "code":"AMZN",
+        "fullName":"Amazon.com Inc"
+    },
+    {
+        "name":"Taiwan Semiconductor",
+        "code":"TSM",
+        "fullName":"Taiwan Semiconductor Manufacturing Co."
+    },
+    {
+        "name":"Meta Platforms Inc.",
+        "code":"META",
+        "fullName":"Meta Platforms Inc."
+    },
+    {
+        "name":"Broadcom",
+        "code":"AVGO",
+        "fullName":"Broadcom Inc."
+    },
+    {
+        "name":"Tesla",
+        "code":"TSLA",
+        "fullName":"Tesla Inc"
+    }
+  ]
+}
+
+### Delete Stock
+DELETE http://localhost:3000/stocks/6
+
+############### USERS-STOCKS RESOURCES ###############
+
+### LIST user stocks
+GET http://localhost:3000/users-stocks/7b3f22cc-7508-4c58-8a85-722a28dba6d9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJAZ21haWwuY29tIiwic3ViIjoiZGE3ZGNhYjEtZmJiMS00N2I4LWIxNmYtMzE4MDE0YzcxNTFmIiwicm9sZXMiOlsiYWRtaW4iXSwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTc3Mjc5ODcyNSwiZXhwIjoxNzcyNzk4Nzg1fQ.pifn_s-RJySLX-feRuq6431DHUpGjaWtsnZ4jVCwa_s
+
+### ADD stock to user
+POST http://localhost:3000/users-stocks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJAZ21haWwuY29tIiwic3ViIjoiZGE3ZGNhYjEtZmJiMS00N2I4LWIxNmYtMzE4MDE0YzcxNTFmIiwicm9sZXMiOlsiYWRtaW4iXSwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTc3Mjc5ODcyNSwiZXhwIjoxNzcyNzk4Nzg1fQ.pifn_s-RJySLX-feRuq6431DHUpGjaWtsnZ4jVCwa_s
+
+{
+  "userId": "7b3f22cc-7508-4c58-8a85-722a28dba6d9",
+  "stockId": 7
+}
+
+### DELETE stock from user
+DELETE http://localhost:3000/users-stocks/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXJAZ21haWwuY29tIiwic3ViIjoiZGE3ZGNhYjEtZmJiMS00N2I4LWIxNmYtMzE4MDE0YzcxNTFmIiwicm9sZXMiOlsiYWRtaW4iXSwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTc3Mjc5ODcyNSwiZXhwIjoxNzcyNzk4Nzg1fQ.pifn_s-RJySLX-feRuq6431DHUpGjaWtsnZ4jVCwa_s
+
+
+
