@@ -6,6 +6,7 @@ export class LitButton extends LitElement {
 }
 render() {
     return html`
+    <h2>Lit Button</h2>
     <button>Lit Button</button>
     <p>This is a button component built with Lit.</p>
     `;
